@@ -18,7 +18,3 @@ It allows users to add, view, and remove tasks interactively in the terminal.
 
 ## 🖥️ How to Run
 
-1. Clone the repository:
-```bash
-git clone https://github.com/YOUR_USERNAME/todoapp-java.git
-cd todoapp-java
