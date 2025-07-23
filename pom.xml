@@ -14,6 +14,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
+    <javafx.version>21.0.1</javafx.version>
   </properties>
 
   <dependencyManagement>
@@ -29,6 +30,14 @@
   </dependencyManagement>
 
   <dependencies>
+    <!-- JavaFX for GUI -->
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>${javafx.version}</version>
+    </dependency>
+
+    <!-- Unit testing -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
@@ -83,14 +92,14 @@
       </plugins>
     </pluginManagement>
 
-    <!-- ✅ اضافه شدن پلاگین اجرای برنامه -->
+    <!-- ✅ Plugin to run JavaFX main class -->
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.0</version>
         <configuration>
-          <mainClass>at.fhj.msd.ToDoApp</mainClass>
+          <mainClass>at.fhj.msd.ToDoAppFX</mainClass>
         </configuration>
       </plugin>
     </plugins>
